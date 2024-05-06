@@ -24,6 +24,9 @@ body, #root, .app{
     font-size: 28px;
     color: rgb(156, 156, 156);
 }
+.navbar a:hover{
+    text-decoration: none;
+}
 .navbar h1 span{
     color: rgb(83, 83, 83);
 }
@@ -71,4 +74,8 @@ header button{
 }
 .action img{
 height: 20px;
+}
+
+.btn-primary{
+    margin-left: 50%;
 }

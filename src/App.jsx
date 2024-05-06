@@ -1,13 +1,19 @@
+import Add from "./components/Add";
 import Table from "./components/Table";
 import Navbar from "./components/navbar";
 import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Table />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Table />} />
+          <Route path="/add" element={<Add />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "fullname": "Thomas Hardy",
       "address": "89 Chiaroscuro Rd",
       "city": "Portland",
@@ -9,7 +9,7 @@
       "country": "USA"
     },
     {
-      "id": 2,
+      "id": "2",
       "fullname": "Maria Adnders",
       "address": "Obere Str. 57",
       "city": "Berlin",
@@ -17,12 +17,20 @@
       "country": "Germany"
     },
     {
-      "id": 3,
+      "id": "3",
       "fullname": "Fran Wilson",
       "address": "C/ Araquil, 67",
       "city": "Madrid",
       "pincode": 28023,
       "country": "Spain"
+    },
+    {
+      "id": "524b",
+      "fullname": "Naa Dorothy",
+      "address": "AA-S438-9993",
+      "city": "Kumasi",
+      "pincode": "00233",
+      "country": "Ghana"
     }
   ]
 }

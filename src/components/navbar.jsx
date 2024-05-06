@@ -1,15 +1,20 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <header className="navbar">
-      <h1>
-        User <span>Details</span>
-      </h1>
+      <a href="/">
+        <h1>User<span>Page</span></h1>
+      </a>
       <nav className="nav">
         <div>
           <input type="text" placeholder="Search..." />
           <img src="src/assets/search.png" alt="" />
         </div>
-        <button>Add User</button>
+        <a href="/add">
+          <button>Add User</button>
+        </a>
       </nav>
     </header>
   );
