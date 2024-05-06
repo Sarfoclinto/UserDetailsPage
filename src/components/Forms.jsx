@@ -24,14 +24,16 @@ const Forms = () => {
   };
 
   const handleAdd = () => {
-    fetch("http://localhost:8000/users", {
+    fetch(" https://jsonplaceholder.typicode.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formsData),
+    }).then(() => {
+      navigate("/");
     });
-    navigate("/");
+    
   };
 
   const navigate = useNavigate();
