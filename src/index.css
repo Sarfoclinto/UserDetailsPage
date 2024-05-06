@@ -63,3 +63,12 @@ header button{
     color: white;
     background-color: gray;
 }
+.action{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+.action img{
+height: 20px;
+}
