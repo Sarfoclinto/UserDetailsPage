@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Thomas Hardy",
+      "address": "89 Chiaroscuro Rd",
+      "city": "Portland",
+      "pincode": 97219,
+      "country": "USA"
+    },
+    {
+      "id": 2,
+      "fullname": "Maria Adnders",
+      "address": "Obere Str. 57",
+      "city": "Berlin",
+      "pincode": 12209,
+      "country": "Germany"
+    },
+    {
+      "id": 3,
+      "fullname": "Fran Wilson",
+      "address": "C/ Araquil, 67",
+      "city": "Madrid",
+      "pincode": 28023,
+      "country": "Spain"
+    }
+  ]
+}
