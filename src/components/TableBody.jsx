@@ -9,7 +9,7 @@ const TableBody = (props) => {
   if (data) {
     all = data.map((user, index) => {
       return (
-        <tr>
+        <tr key={user.id}>
           <td>{index + 1}</td>
           <td>{user.name}</td>
           <td>{user.address.street}</td>
@@ -24,6 +24,7 @@ const TableBody = (props) => {
         </tr>
       );
     });
+      console.log(all)
   }
 
   return all;

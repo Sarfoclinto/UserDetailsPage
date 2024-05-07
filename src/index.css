@@ -87,3 +87,46 @@ th{
 .container{
     margin-top: 30px;
 }
+.content{
+    width: 100%;
+}
+.addUser-form, .addUser-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.add-name, .add-address{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+}
+.add-name label, .add-address label{
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: maroon;
+}
+
+.addUser-form input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0 0 3px lightgray;
+    padding: 20px;
+}
+
+.add-user-button{
+    border: none;
+    font-size: 17px;
+    background-color: aqua;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: bold;
+}
