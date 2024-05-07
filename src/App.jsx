@@ -1,4 +1,5 @@
 import Add from "./components/Add";
+import EditPage from "./components/EditPage";
 import Table from "./components/Table";
 import Navbar from "./components/navbar";
 import "./index.css";
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Table />} />
           <Route path="/add" element={<Add />} />
+          <Route path="/editpage/:id" element={<EditPage />} />
         </Routes>
       </Router>
     </div>

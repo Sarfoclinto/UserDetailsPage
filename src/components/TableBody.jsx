@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import Delete from "./Delete";
+import Edit from "./Edit";
 
 const TableBody = () => {
   const [users, setUsers] = useState([]);
@@ -27,7 +28,7 @@ const TableBody = () => {
         <td>{user.address.suite || user.pincode}</td>
         <td className="action">
           <img src="src/assets/view.png" alt="" />
-          <img src="src/assets/edit.png" alt="" />
+          <Edit id={user.id} />
           <Delete id={user.id} />
         </td>
       </tr>
