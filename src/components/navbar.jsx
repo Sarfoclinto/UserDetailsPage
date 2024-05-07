@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header className="navbar">
+    <header className="nnavbar">
       <a href="/">
-        <h1>User<span>Page</span></h1>
+        <h1>
+          User<span>Page</span>
+        </h1>
       </a>
       <nav className="nav">
         <div>

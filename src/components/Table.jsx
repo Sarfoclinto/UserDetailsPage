@@ -1,7 +1,15 @@
+import TableBody from "./TableBody";
+import useFetch from "./useFetch";
+
 const Table = () => {
+  const url = "https://jsonplaceholder.typicode.com/users";
+  const { data, isLoading, error } = useFetch(url);
   return (
     <div className="container">
-      <table className="table table-bordered">
+      {!data && <h1>
+        Users Details Loading...
+      </h1>}
+      {data && <table className="table table-bordered">
         <thead>
           <tr>
             <th rowSpan={2}>#</th>
@@ -16,8 +24,10 @@ const Table = () => {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody></tbody>
-      </table>
+        <tbody>
+          <TableBody data={data} />
+        </tbody>
+      </table>}
     </div>
   );
 };

@@ -11,7 +11,7 @@ body, #root, .app{
     font-family: "Inter", sans-serif;
 }
 
-.navbar{
+.nnavbar{
     width: 100%;
     display: flex;
     align-items: center;
@@ -19,18 +19,19 @@ body, #root, .app{
     padding: 10px;
     border-bottom: 1px solid rgba(211, 211, 211, 0.753);
     box-shadow: 0 0 5px lightgray;
+    
 }
-.navbar h1{
+.nnavbar h1{
     font-size: 28px;
     color: rgb(156, 156, 156);
 }
-.navbar a:hover{
+.nnavbar a:hover{
     text-decoration: none;
 }
-.navbar h1 span{
+.nnavbar h1 span{
     color: rgb(83, 83, 83);
 }
-.navbar img{
+.nnavbar img{
     height: 23px;
 }
 .nav{
@@ -61,7 +62,7 @@ body, #root, .app{
 header button{
     border: none;
     font-size: 17px;
-    padding: 6px;
+    padding: 2.5px 5px;
     border-radius: 5px;
     color: white;
     background-color: gray;
@@ -81,4 +82,8 @@ height: 20px;
 }
 th{
     text-align: center;
+}
+
+.container{
+    margin-top: 30px;
 }
