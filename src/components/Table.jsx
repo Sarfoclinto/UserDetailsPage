@@ -1,23 +1,22 @@
-import TableBody from "./TableBody";
-
 const Table = () => {
   return (
     <div className="container">
       <table className="table table-bordered">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Address</th>
+            <th rowSpan={2}>#</th>
+            <th rowSpan={2}>Name</th>
+            <th colSpan={6}>Address</th>
+          </tr>
+          <tr>
+            <th>Street</th>
             <th>City</th>
-            <th>Pin Code</th>
-            <th>Country</th>
+            <th>ZipCode</th>
+            <th>Suite</th>
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <TableBody />
-        </tbody>
+        <tbody></tbody>
       </table>
     </div>
   );
