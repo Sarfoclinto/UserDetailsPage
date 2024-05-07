@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-const AddUser = () => {
+const Modal = ({ toggle }) => {
   const [newUserName, setNewUserName] = useState({
     name: "",
   });
@@ -43,20 +42,28 @@ const AddUser = () => {
   };
 
   const handleAdd = () => {
-    fetch("https://jsonplaceholder.typicode.com/users", {
-      method: "POST",
-      body: JSON.stringify(newData),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    // fetch("http://localhost:8000/users", {
+    //   method: "POST",
+    //   body: JSON.stringify(newData),
+    //   headers: {
+    //     "Content-type": "application/json; charset=UTF-8",
+    //   },
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) =>
+    //     // setUsers((prev) => {
+    //     //   return [...prev, data];
+    //     // })
+
+    //   );
+    console.log(data);
   };
+
   return (
     <div className="addUser-form">
+      <div onClick={toggle} className="close">
+        &times;
+      </div>
       <h1>Add User</h1>
       <form onSubmit={handleSubmit}>
         <div className="add-name">
@@ -119,7 +126,7 @@ const AddUser = () => {
           />
         </div>
 
-        <button className="add-user-button" onClick={handleAdd}>
+        <button className="add-user-button" onClick={(handleAdd, toggle)}>
           Add
         </button>
       </form>
@@ -127,4 +134,4 @@ const AddUser = () => {
   );
 };
 
-export default AddUser;
+export default Modal;

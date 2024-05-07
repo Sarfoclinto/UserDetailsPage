@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <header className="nnavbar">
       <a href="/">
@@ -14,9 +14,8 @@ const Navbar = () => {
           <input type="text" placeholder="Search..." />
           <img src="src/assets/search.png" alt="" />
         </div>
-        <a href="/add">
-          <button>Add User</button>
-        </a>
+
+        <button onClick={toggle}>Add User</button>
       </nav>
     </header>
   );

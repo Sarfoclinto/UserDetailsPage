@@ -6,9 +6,10 @@
 }
 body, #root, .app{
     width: 100%;
-    min-height: fit-content;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     font-family: "Inter", sans-serif;
+    
 }
 
 .nnavbar{
@@ -89,14 +90,35 @@ th{
 }
 .content{
     width: 100%;
-}
-.addUser-form, .addUser-form form{
-    width: 100%;
     display: flex;
+    justify-content: center;
+    
+}
+.addUser-form{
+    width: 50%;
+    border: 1px solid lightgray;
+    display: flex;
+    box-shadow: 0 0 5px lightgray;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
+    background-color: gray;
+    height: fit-content;
 }
+.addUser-form form{
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 50%;
+    border: 1px solid lightgray;
+    display: flex;
+    box-shadow: 0 0 5px lightgray;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
 .add-name, .add-address{
    display: flex;
    flex-direction: column;
@@ -129,4 +151,29 @@ th{
     padding: 10px 15px;
     border-radius: 7px;
     font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.911);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    right: 25%;
+    margin: 5px;
+    background-color: aqua;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 60%;
 }
