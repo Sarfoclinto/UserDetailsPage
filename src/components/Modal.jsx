@@ -54,13 +54,20 @@ const Modal = ({ toggle, setUsers }) => {
         setUsers((prev) => {
           return [...prev, data];
         })
-      );
+      )
+      .finally(() => {
+        document
+          .querySelector(".add-user-button")
+          .addEventListener("click", () => {
+            toggle();
+          });
+      });
     console.log(users);
   };
 
   return (
     <div className="addUser-form">
-      <div onClick={toggle} className="close">
+      <div className="close" onClick={toggle}>
         &times;
       </div>
       <h1>Add User</h1>
@@ -125,7 +132,7 @@ const Modal = ({ toggle, setUsers }) => {
           />
         </div>
 
-        <button className="add-user-button" onClick={(handleAdd, toggle)}>
+        <button className="add-user-button" onClick={handleAdd}>
           Add
         </button>
       </form>

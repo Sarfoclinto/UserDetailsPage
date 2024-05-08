@@ -42,7 +42,7 @@ const Table = ({ modal, toggle }) => {
             </tr>
           </thead>
           <tbody>
-            <TableBody data={users} />
+            <TableBody users={users} />
           </tbody>
         </table>
       )}

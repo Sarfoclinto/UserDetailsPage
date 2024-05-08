@@ -1,8 +1,20 @@
 import { useState } from "react";
 
 
-const TableBody = ({ data }) => {
-  return data.map((user, index) => {
+const TableBody = ({ users }) => {
+  const [update, setUpdate] = useState([]);
+
+  const handledelete = (user, users) => {
+    const id = user.id;
+    setUpdate(() => {
+      return users.filter((theuser) => {
+        return theuser.id !== id;
+      });
+    });
+    console.log(update);
+  };
+
+  return users.map((user, index) => {
     return (
       <tr key={user.id}>
         <td>{index + 1}</td>
@@ -14,7 +26,14 @@ const TableBody = ({ data }) => {
         <td className="action">
           <img src="src/assets/view.png" alt="" />
           <img src="src/assets/edit.png" alt="" />
-          <img src="src/assets/delete.png" alt="" />
+          <img
+            src="src/assets/delete.png"
+            alt=""
+            className="delete-btn"
+            onClick={() => {
+              handledelete(user, users);
+            }}
+          />
         </td>
       </tr>
     );

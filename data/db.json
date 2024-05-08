@@ -249,6 +249,46 @@
         "zipcode": "00233",
         "suite": "SE, 34443"
       }
+    },
+    {
+      "id": "79c1",
+      "name": "Virgile",
+      "address": {
+        "street": "AA-S438-9993",
+        "city": "Kumasi",
+        "zipcode": "00233",
+        "suite": "SE, 34443"
+      }
+    },
+    {
+      "id": "bfba",
+      "name": "Sarfo Clinton",
+      "address": {
+        "street": "AA-S438-9993",
+        "city": "Kumasi",
+        "zipcode": "00233",
+        "suite": "SE, 34443"
+      }
+    },
+    {
+      "id": "fd31",
+      "name": "Sarfo Clinton",
+      "address": {
+        "street": "AA-S438-9993",
+        "city": "Kumasi",
+        "zipcode": "00233",
+        "suite": "SE, 34443"
+      }
+    },
+    {
+      "id": "5c3f",
+      "name": "Sarfo Gideon",
+      "address": {
+        "street": "AA-S438-9993",
+        "city": "Kumasi",
+        "zipcode": "00233",
+        "suite": "SE, 34443"
+      }
     }
   ]
 }
