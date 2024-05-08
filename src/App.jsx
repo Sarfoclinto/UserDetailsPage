@@ -1,5 +1,4 @@
 import useFetch from "./components/useFetch";
-import Modal from "./components/Modal";
 import Table from "./components/Table";
 import Navbar from "./components/navbar";
 import "./index.css";
@@ -17,15 +16,14 @@ function App() {
   return (
     <div className="app">
       <Navbar toggle={toggleModal} />
-      {modal && (
-        <div className="overlay">
-          <Modal toggle={toggleModal} />
-        </div>
-      )}
+
       <div className="content">
         <Router>
           <Routes>
-            <Route path="/" element={<Table />} />
+            <Route
+              path="/"
+              element={<Table modal={modal} toggle={toggleModal} />}
+            />
           </Routes>
         </Router>
       </div>

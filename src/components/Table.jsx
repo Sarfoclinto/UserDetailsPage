@@ -1,16 +1,31 @@
 import TableBody from "./TableBody";
 import useFetch from "./useFetch";
-import { useState } from "react";
+import Modal from "./Modal";
+import { useEffect, useState } from "react";
 
-const Table = () => {
-   const [users, setUsers] = useState([]);
-   const url = "http://localhost:8000/users";
-  const { data, isLoading, error } = useFetch(url);
-  
+const Table = ({ modal, toggle }) => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/users")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        return setUsers(data);
+      });
+  });
+
   return (
     <div className="container">
-      {!data && <h1>Users Details Loading...</h1>}
-      {data && (
+      {modal && (
+        <div className="overlay">
+          <Modal toggle={toggle} setUsers={setUsers} />
+        </div>
+      )}
+
+      {!users && <h1>Users Details Loading...</h1>}
+      {users && (
         <table className="table table-bordered">
           <thead>
             <tr>
@@ -27,7 +42,7 @@ const Table = () => {
             </tr>
           </thead>
           <tbody>
-            <TableBody data={data} />
+            <TableBody data={users} />
           </tbody>
         </table>
       )}

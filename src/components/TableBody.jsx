@@ -2,8 +2,6 @@ import { useState } from "react";
 
 
 const TableBody = ({ data }) => {
- 
-
   return data.map((user, index) => {
     return (
       <tr key={user.id}>

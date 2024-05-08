@@ -1,5 +1,5 @@
 import { useState } from "react";
-const Modal = ({ toggle }) => {
+const Modal = ({ toggle, setUsers }) => {
   const [newUserName, setNewUserName] = useState({
     name: "",
   });
@@ -42,21 +42,20 @@ const Modal = ({ toggle }) => {
   };
 
   const handleAdd = () => {
-    // fetch("http://localhost:8000/users", {
-    //   method: "POST",
-    //   body: JSON.stringify(newData),
-    //   headers: {
-    //     "Content-type": "application/json; charset=UTF-8",
-    //   },
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) =>
-    //     // setUsers((prev) => {
-    //     //   return [...prev, data];
-    //     // })
-
-    //   );
-    console.log(data);
+    fetch("http://localhost:8000/users", {
+      method: "POST",
+      body: JSON.stringify(newData),
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) =>
+        setUsers((prev) => {
+          return [...prev, data];
+        })
+      );
+    console.log(users);
   };
 
   return (
